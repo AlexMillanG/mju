@@ -27,8 +27,8 @@ public class UserService {
         return new ResponseEntity<>(new ApiResponseDto(foundUser.get(),false,null),HttpStatus.OK);
     }
 
-    public ResponseEntity<ApiResponseDto> save (){
-        //aldrick es gay
+    public ResponseEntity<ApiResponseDto> save (UserDto dto){
+
         return null;
     }
 }
