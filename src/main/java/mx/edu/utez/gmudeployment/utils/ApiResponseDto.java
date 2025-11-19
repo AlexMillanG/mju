@@ -1,6 +1,7 @@
 package mx.edu.utez.gmudeployment.utils;
 
 import lombok.Data;
+import org.springframework.http.HttpStatus;
 
 
 public class ApiResponseDto {
@@ -8,14 +9,13 @@ public class ApiResponseDto {
     private Object data;
     private boolean error;
     private String message;
+    private HttpStatus status;
 
-    public ApiResponseDto(Object data, boolean error, String message) {
+    public ApiResponseDto(Object data, boolean error, String message, HttpStatus status) {
         this.data = data;
         this.error = error;
         this.message = message;
-    }
-
-    public ApiResponseDto() {
+        this.status = status;
     }
 
     public Object getData() {
@@ -40,5 +40,13 @@ public class ApiResponseDto {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public HttpStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(HttpStatus status) {
+        this.status = status;
     }
 }

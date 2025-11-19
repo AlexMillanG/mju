@@ -14,8 +14,8 @@ public class StudentEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "student_id", nullable = false, unique = true)
-    private String studentId;
+    @Column(name = "matricula", nullable = false, unique = true)
+    private String matricula;
 
     private String fullName;
 
